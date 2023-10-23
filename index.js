@@ -2,8 +2,11 @@
 
 const inquirer = require('inquirer');
 const fs = require('fs');
+const {getBadge} = require ('./utils/generateMarkdown.js');
 
 //Create an array of questions for user input
+
+function generateReadme () {
 
 inquirer.prompt([
 
@@ -68,18 +71,18 @@ inquirer.prompt([
     // Create a function to write README file
 
     .then(answers => {
+        const licenseBadge = getBadge(answers.license);
+        console.log(licenseBadge);
         fs.writeFile('README.md', JSON.stringify(answers, null, 20), (err) => {
             err ? console.log(err) :
                 console.log('README generated!');
 
         })
 
-    });
+    })
+
+};
 
 // Create a function to initialize app
 
-function init() {
-}
-
-// Function call to initialize app
-init();
+generateReadme();

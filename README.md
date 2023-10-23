@@ -1,10 +1,10 @@
 {
-          "title": ";",
-          "description": "l",
-          "installation": "l",
-          "usage": "l",
+          "title": "a",
+          "description": "a",
+          "installation": "a",
+          "usage": "a",
           "license": "MIT",
-          "contributing": "l",
-          "tests": "l",
-          "github": "l"
+          "contributing": "a",
+          "tests": "a",
+          "github": "a"
 }
