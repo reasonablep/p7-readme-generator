@@ -2,7 +2,7 @@
 
 const inquirer = require('inquirer');
 const fs = require('fs');
-const {getBadge} = require ('./utils/generateMarkdown.js');
+const {renderLicenseLink, generateMarkdown} = require ('./utils/generateMarkdown.js');
 
 //Create an array of questions for user input
 
@@ -41,8 +41,9 @@ inquirer.prompt([
         message: 'Please select your license.',
         name: 'license',
         choices: [
-            "MIT",
+            "Apache",
             "BSD",
+            "MIT",
             "GPL"
         ]
     },
@@ -71,9 +72,23 @@ inquirer.prompt([
     // Create a function to write README file
 
     .then(answers => {
-        const licenseBadge = getBadge(answers.license);
-        console.log(licenseBadge);
-        fs.writeFile('README.md', JSON.stringify(answers, null, 20), (err) => {
+
+        console.log(answers);
+
+        let templateData = generateMarkdown(answers)
+        console.log('this is template data');
+        console.log(templateData);
+
+        let licenseData = renderLicenseLink(answers)
+        console.log('license');
+        console.log(licenseData);
+
+        // const licenseBadge = getBadge(answers.license);
+        // const licenseLink = renderLicenseLink(answers.license);
+        // console.log(licenseBadge);
+        // console.log(licenseLink);
+
+        fs.writeFile('README.md', templateData, (err) => {
             err ? console.log(err) :
                 console.log('README generated!');
 
