@@ -1,30 +1,35 @@
 # peters project
 
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
 ## Description
-i eat it
+description
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [object Object]
+- [Usage](#usage)
+- [License](#license)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
 
   
 ## Installation
-smoke flickz
+installation
 
 ## Usage
-loc trips
+usage
 
 ## License
+MIT
 
 ## Contributing
-instruct
+contribution
 
 ## Tests
-testes
+test
+
+## Questions
+For questions about this project, please reach out to me on GitHub, https://github/reasonablep or via e-mail at, pmrtnz@me.com. Thanks for reading. 

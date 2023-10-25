@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Build badge and license objects
 
 let licenseBadges = {
   Apache: '[![License: Apache](https://img.shields.io/badge/License-Apache-purple)]',
@@ -16,7 +15,7 @@ let licenseLink = {
 
 }
 
-
+// Return badge if found
 
 function getBadge (license) {
   if (license in licenseBadges) {
@@ -28,9 +27,6 @@ function getBadge (license) {
   };
 }
 
-
-
-// TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 
 function renderLicenseLink(license) {
@@ -41,7 +37,6 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
 // If there is no license, return an empty strings
 
 function renderLicenseSection(license) {
@@ -52,8 +47,6 @@ function renderLicenseSection(license) {
     return ''
   }
 }
-
-// How does one return a section of the README since we are using node? Return it to the terminal? Console?
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -68,7 +61,8 @@ ${data.description}
 
 - [Installation](#installation)
 - [Usage](#usage)
-- ${licenseLink}
+- [Usage](#usage)
+- [License](#license)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
@@ -90,7 +84,7 @@ ${data.contributing}
 ${data.tests}
 
 ## Questions
-For questions about this project, please reach out to me on GitHub, https://github/${data.questions}. Thanks for reading. 
+For questions about this project, please reach out to me on GitHub, https://github/${data.questions} or via e-mail at, ${data.email}. Thanks for reading. 
 `
 
 }

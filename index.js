@@ -64,8 +64,16 @@ inquirer.prompt([
     {
 
         type: 'input',
-        message: 'Please enter your GitHub username',
+        message: 'Please enter your GitHub username.',
         name: 'questions'
+
+    },
+
+    {
+
+        type: 'input',
+        message: 'Please enter your e-mail address.',
+        name: 'email'
 
     }
 ])
