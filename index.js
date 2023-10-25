@@ -2,7 +2,7 @@
 
 const inquirer = require('inquirer');
 const fs = require('fs');
-const {renderLicenseLink, generateMarkdown} = require ('./utils/generateMarkdown.js');
+const {getBadge, renderLicenseLink, generateMarkdown} = require ('./utils/generateMarkdown.js');
 
 //Create an array of questions for user input
 
@@ -44,7 +44,8 @@ inquirer.prompt([
             "Apache",
             "BSD",
             "MIT",
-            "GPL"
+            "GPL",
+            ""
         ]
     },
 
@@ -64,7 +65,7 @@ inquirer.prompt([
 
         type: 'input',
         message: 'Please enter your GitHub username',
-        name: 'github'
+        name: 'questions'
 
     }
 ])
@@ -82,6 +83,9 @@ inquirer.prompt([
         let licenseData = renderLicenseLink(answers)
         console.log('license');
         console.log(licenseData);
+
+        let badgeObject = getBadge(answers);
+        console.log(badgeObject)
 
         // const licenseBadge = getBadge(answers.license);
         // const licenseLink = renderLicenseLink(answers.license);

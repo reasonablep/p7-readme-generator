@@ -9,8 +9,11 @@ let licenseBadges = {
 }
 
 let licenseLink = {
-  Apache: '# License: Apache',
-  MIT: '# License: Apache'
+  Apache: '#[License: Apache](#License)',
+  BSD: '#[License: BSD](#License)',
+  GPL: '#[License: Apache](#License)',
+  MIT: '#[License: MIT](#License)'
+
 }
 
 
@@ -31,25 +34,29 @@ function getBadge (license) {
 // If there is no license, return an empty string
 
 function renderLicenseLink(license) {
-  let licenseLink = '[License](#license)';
-  if (license) {
-    return licenseLink
+  if (license in licenseLink) {
+    return licenseLink[license]
   } else {
     return ''
-  };
+  }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty strings
 
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  let licenseSection = '## License'
+  if (license) {
+    return licenseSection
+  } else {
+    return ''
+  }
+}
 
 // How does one return a section of the README since we are using node? Return it to the terminal? Console?
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-
-
   return `# ${data.title}
 
 ${getBadge(data.license)}
@@ -61,9 +68,11 @@ ${data.description}
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
-- [Questions](#questions)
 - ${licenseLink}
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
   
 ## Installation
 ${data.installation}
@@ -71,12 +80,19 @@ ${data.installation}
 ## Usage
 ${data.usage}
 
+## License
+${data.license}
+
 ## Contributing
 ${data.contributing}
 
 ## Tests
-${data.tests}`
+${data.tests}
+
+## Questions
+For questions about this project, please reach out to me on GitHub, https://github/${data.questions}. Thanks for reading. 
+`
 
 }
 
-module.exports = { generateMarkdown, getBadge, renderLicenseLink};
+module.exports = {renderLicenseSection, generateMarkdown, getBadge, renderLicenseLink};

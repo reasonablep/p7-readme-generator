@@ -1,26 +1,30 @@
-# l
+# peters project
 
-[![License: Apache](https://img.shields.io/badge/License-Apache-purple)]
+
   
 ## Description
-d
+i eat it
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
-- [Questions](#questions)
 - [object Object]
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
   
 ## Installation
-l
+smoke flickz
 
 ## Usage
-d
+loc trips
+
+## License
 
 ## Contributing
-
+instruct
 
 ## Tests
-d
+testes
