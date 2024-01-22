@@ -61,10 +61,9 @@ ${data.description}
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Usage](#usage)
+- [Screenshots](#screenshots)
 - [License](#license)
 - [Contributing](#contributing)
-- [Tests](#tests)
 - [Questions](#questions)
 
   
@@ -80,8 +79,6 @@ ${data.license}
 ## Contributing
 ${data.contributing}
 
-## Tests
-${data.tests}
 
 ## Questions
 For questions about this project, please reach out to me on GitHub, https://github/${data.questions} or via e-mail at, ${data.email}. Thanks for reading. 

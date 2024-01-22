@@ -95,11 +95,6 @@ inquirer.prompt([
         let badgeObject = getBadge(answers);
         console.log(badgeObject)
 
-        // const licenseBadge = getBadge(answers.license);
-        // const licenseLink = renderLicenseLink(answers.license);
-        // console.log(licenseBadge);
-        // console.log(licenseLink);
-
         fs.writeFile('README.md', templateData, (err) => {
             err ? console.log(err) :
                 console.log('README generated!');
